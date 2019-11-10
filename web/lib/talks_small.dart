@@ -107,35 +107,103 @@ class TalksSmall extends StatelessWidget {
                     ],
                   )),
               Container(
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                        flex: 6,
-                        child: ImagemCard(
-                          img:
-                              'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG-20191009-WA0048.jpg',
-                        ),
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 6,
+                      child: ImagemCard(
+                        img:
+                            'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG-20191009-WA0048.jpg',
                       ),
-                      Expanded(
-                        flex: 6,
-                        child: Column(
-                          children: <Widget>[
-                            ImagemCard(
-                              custom_height: 210,
-                              img:
-                                  'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG-20191009-WA0057.jpg',
-                            ),
-                            ImagemCard(
-                              custom_height: 210,
-                              img:
-                                  'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG-20191009-WA0081.jpg',
-                            ),
-                          ],
-                        ),
-                      )
+                    ),
+                    Expanded(
+                      flex: 6,
+                      child: Column(
+                        children: <Widget>[
+                          ImagemCard(
+                            custom_height: 210,
+                            img:
+                                'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG-20191009-WA0057.jpg',
+                          ),
+                          ImagemCard(
+                            custom_height: 210,
+                            img:
+                                'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG-20191009-WA0081.jpg',
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                          width: double.maxFinite,
+                          child: Text(
+                            'TechSummit Movile 2019',
+                            style: TextStyle(
+                                color: Color(0XFF707070),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25),
+                            textAlign: TextAlign.left,
+                          )),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                          'Dia 09 de Novembro tive o prazer de participar do primeiro evento da Movile'
+                          ' compartilhando tecnologia com a comunidade, dessa vez palestrei sobre o porque'
+                          ' o Flutter está cada vez mais, se mostrando ser o framework do futuro para Apps Mobile.',
+                          style:
+                              TextStyle(color: Color(0XFF707070), fontSize: 18))
                     ],
-                  ))
+                  )),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 6,
+                      child: ImagemCard(
+                        img:
+                            'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG_2926.png',
+                      ),
+                    ),
+                    Expanded(
+                      flex: 6,
+                      child: Column(
+                        children: <Widget>[
+                          ImagemCard(
+                            custom_height: 210,
+                            img:
+                                'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG_2932.png',
+                          ),
+                          ImagemCard(
+                            custom_height: 210,
+                            img:
+                                'https://raw.githubusercontent.com/BrunoEleodoro/brunoeleodoro.github.io/master/img/portfolio/IMG_2936.png',
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ],

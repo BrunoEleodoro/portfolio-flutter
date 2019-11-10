@@ -12,13 +12,22 @@ class LargeScreen extends StatefulWidget {
 
 class _LargeScreenState extends State<LargeScreen> {
   var mobile = false;
+  var veryLargeScreen = false;
   @override
   Widget build(BuildContext context) {
-    if (MediaQuery.of(context).size.width < 600) {
+    var widthAll = MediaQuery.of(context).size.width;
+    if (widthAll < 600) {
       mobile = true;
     } else {
       mobile = false;
     }
+
+    if (widthAll >= 1400) {
+      veryLargeScreen = true;
+    } else {
+      veryLargeScreen = false;
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -202,7 +211,13 @@ class _LargeScreenState extends State<LargeScreen> {
                         SizedBox(
                           height: 10,
                         ),
-                        (mobile) ? HackathonsSmall() : HackathonsLarge()
+                        (mobile)
+                            ? HackathonsSmall()
+                            : Container(
+                                width:
+                                    (veryLargeScreen) ? 1200 : double.maxFinite,
+                                alignment: Alignment.center,
+                                child: HackathonsLarge())
                       ],
                     ),
                   ),
@@ -329,7 +344,6 @@ class _LargeScreenState extends State<LargeScreen> {
             //                     )
             //                   ]))
             //         ])),
-
             SizedBox(
               height: 40,
             ),
@@ -365,7 +379,14 @@ class _LargeScreenState extends State<LargeScreen> {
                             SizedBox(
                               height: 30,
                             ),
-                            (mobile) ? TalksSmall() : TalksLarge()
+                            (mobile)
+                                ? TalksSmall()
+                                : Container(
+                                    width: (veryLargeScreen)
+                                        ? 1200
+                                        : double.maxFinite,
+                                    alignment: Alignment.center,
+                                    child: TalksLarge())
                           ],
                         ),
                       )
